@@ -4,8 +4,8 @@
 import React from 'react';
 import { ConfigProvider } from 'antd';
 
-import moment from '/Users/工作/ACode/CBB/web-base/node_modules/.pnpm/moment@2.30.1/node_modules/moment';
-import '/Users/工作/ACode/CBB/web-base/node_modules/.pnpm/moment@2.30.1/node_modules/moment/locale/zh-cn';
+import moment from '/Users/工作/Demo/aaa-web/web-base/node_modules/.pnpm/moment@2.30.1/node_modules/moment';
+import '/Users/工作/Demo/aaa-web/web-base/node_modules/.pnpm/moment@2.30.1/node_modules/moment/locale/zh-cn';
 import { RawIntlProvider, getLocale, getDirection , setIntl, getIntl, localeInfo, event, LANG_CHANGE_EVENT } from './localeExports';
 
 

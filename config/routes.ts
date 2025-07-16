@@ -1,7 +1,6 @@
 export default [
   {
     path: '/',
-    redirect: '/screen',
     routes: [
       {
         name: 'document',

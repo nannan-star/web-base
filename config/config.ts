@@ -23,4 +23,16 @@ export default defineConfig({
   npmClient: 'pnpm',
   // mfsu: false,
   // fastRefresh: false,
+  
+  // 构建配置
+  jsMinifier: 'terser',
+  jsMinifierOptions: {
+    compress: {
+      drop_console: true,
+      drop_debugger: true,
+    },
+    format: {
+      comments: false,
+    },
+  },
 });

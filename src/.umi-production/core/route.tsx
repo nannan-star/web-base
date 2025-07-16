@@ -4,19 +4,19 @@
 import React from 'react';
 
 export async function getRoutes() {
-  const routes = {"1":{"name":"screen","path":"/screen","layout":false,"id":"1"},"2":{"path":"/","parentId":"@@/global-layout","id":"2"},"3":{"name":"document","path":"/doc","parentId":"2","id":"3"},"4":{"name":"umi","path":"/doc/umi","parentId":"3","id":"4"},"5":{"name":"package","path":"/doc/package","parentId":"3","id":"5"},"6":{"name":"code-standard","path":"/doc/code-standard","parentId":"3","id":"6"},"7":{"name":"ui","path":"/doc/ui","parentId":"3","id":"7"},"8":{"name":"i18n","path":"/doc/i18n","parentId":"3","id":"8"},"9":{"name":"error-boundary","path":"/doc/error-boundary","parentId":"3","id":"9"},"10":{"name":"ui","path":"/ui","parentId":"2","id":"10"},"11":{"name":"hc-button","path":"/ui/hc-button","parentId":"10","id":"11"},"12":{"name":"hc-select","path":"/ui/hc-select","parentId":"10","id":"12"},"13":{"name":"station","path":"/station","parentId":"2","id":"13"},"14":{"name":"station-list","path":"/station/station-list","parentId":"13","id":"14"},"15":{"name":"map","path":"/map","parentId":"2","id":"15"},"16":{"name":"google-map","path":"/map/google-map","parentId":"15","id":"16"},"17":{"name":"maptile-map","path":"/map/maptile-map","parentId":"15","id":"17"},"18":{"name":"mapbox-map","path":"/map/mapbox-map","parentId":"15","id":"18"},"19":{"name":"tianditu-map","path":"/map/tianditu-map","parentId":"15","id":"19"},"20":{"name":"amap-map","path":"/map/amap-map","parentId":"15","id":"20"},"21":{"name":"osm-map","path":"/map/osm-map","parentId":"15","id":"21"},"22":{"path":"/login","layout":false,"id":"22"},"@@/global-layout":{"id":"@@/global-layout","path":"/","isLayout":true}} as const;
+  const routes = {"1":{"path":"/","parentId":"@@/global-layout","id":"1"},"2":{"name":"document","path":"/doc","parentId":"1","id":"2"},"3":{"name":"umi","path":"/doc/umi","parentId":"2","id":"3"},"4":{"name":"package","path":"/doc/package","parentId":"2","id":"4"},"5":{"name":"code-standard","path":"/doc/code-standard","parentId":"2","id":"5"},"6":{"name":"ui","path":"/doc/ui","parentId":"2","id":"6"},"7":{"name":"i18n","path":"/doc/i18n","parentId":"2","id":"7"},"8":{"name":"error-boundary","path":"/doc/error-boundary","parentId":"2","id":"8"},"9":{"name":"screen","path":"/doc/screen","parentId":"2","id":"9"},"10":{"name":"ui","path":"/ui","parentId":"1","id":"10"},"11":{"name":"hc-button","path":"/ui/hc-button","parentId":"10","id":"11"},"12":{"name":"hc-select","path":"/ui/hc-select","parentId":"10","id":"12"},"13":{"name":"station","path":"/station","parentId":"1","id":"13"},"14":{"name":"station-list","path":"/station/station-list","parentId":"13","id":"14"},"15":{"name":"map","path":"/map","parentId":"1","id":"15"},"16":{"name":"google-map","path":"/map/google-map","parentId":"15","id":"16"},"17":{"name":"maptile-map","path":"/map/maptile-map","parentId":"15","id":"17"},"18":{"name":"mapbox-map","path":"/map/mapbox-map","parentId":"15","id":"18"},"19":{"name":"tianditu-map","path":"/map/tianditu-map","parentId":"15","id":"19"},"20":{"name":"amap-map","path":"/map/amap-map","parentId":"15","id":"20"},"21":{"name":"osm-map","path":"/map/osm-map","parentId":"15","id":"21"},"22":{"name":"screen","path":"/screen","layout":false,"id":"22"},"23":{"name":"screen1","path":"/screen1","layout":false,"id":"23"},"24":{"path":"/login","layout":false,"id":"24"},"@@/global-layout":{"id":"@@/global-layout","path":"/","isLayout":true}} as const;
   return {
     routes,
     routeComponents: {
-'1': React.lazy(() => import(/* webpackChunkName: "p__screen__index" */'@/pages/screen/index.tsx')),
+'1': React.lazy(() => import('./EmptyRoute')),
 '2': React.lazy(() => import('./EmptyRoute')),
-'3': React.lazy(() => import('./EmptyRoute')),
-'4': React.lazy(() => import(/* webpackChunkName: "p__doc__umi" */'@/pages/doc/umi.tsx')),
-'5': React.lazy(() => import(/* webpackChunkName: "p__doc__package" */'@/pages/doc/package.tsx')),
-'6': React.lazy(() => import(/* webpackChunkName: "p__doc__code-standard" */'@/pages/doc/code-standard.tsx')),
-'7': React.lazy(() => import(/* webpackChunkName: "p__doc__ui" */'@/pages/doc/ui.tsx')),
-'8': React.lazy(() => import(/* webpackChunkName: "p__doc__i18n" */'@/pages/doc/i18n.tsx')),
-'9': React.lazy(() => import(/* webpackChunkName: "p__doc__error-boundary" */'@/pages/doc/error-boundary.tsx')),
+'3': React.lazy(() => import(/* webpackChunkName: "p__doc__umi" */'@/pages/doc/umi.tsx')),
+'4': React.lazy(() => import(/* webpackChunkName: "p__doc__package" */'@/pages/doc/package.tsx')),
+'5': React.lazy(() => import(/* webpackChunkName: "p__doc__code-standard" */'@/pages/doc/code-standard.tsx')),
+'6': React.lazy(() => import(/* webpackChunkName: "p__doc__ui" */'@/pages/doc/ui.tsx')),
+'7': React.lazy(() => import(/* webpackChunkName: "p__doc__i18n" */'@/pages/doc/i18n.tsx')),
+'8': React.lazy(() => import(/* webpackChunkName: "p__doc__error-boundary" */'@/pages/doc/error-boundary.tsx')),
+'9': React.lazy(() => import(/* webpackChunkName: "p__doc__screen" */'@/pages/doc/screen.tsx')),
 '10': React.lazy(() => import('./EmptyRoute')),
 '11': React.lazy(() => import(/* webpackChunkName: "p__ui__hc-button" */'@/pages/ui/hc-button.tsx')),
 '12': React.lazy(() => import(/* webpackChunkName: "p__ui__hc-select" */'@/pages/ui/hc-select.tsx')),
@@ -29,8 +29,10 @@ export async function getRoutes() {
 '19': React.lazy(() => import(/* webpackChunkName: "p__map__tianditu-map__index" */'@/pages/map/tianditu-map/index.tsx')),
 '20': React.lazy(() => import(/* webpackChunkName: "p__map__amap-map__index" */'@/pages/map/amap-map/index.tsx')),
 '21': React.lazy(() => import(/* webpackChunkName: "p__map__osm-map__index" */'@/pages/map/osm-map/index.tsx')),
-'22': React.lazy(() => import(/* webpackChunkName: "p__login__index" */'@/pages/login/index.tsx')),
-'@@/global-layout': React.lazy(() => import(/* webpackChunkName: "layouts__index" */'/Users/工作/ACode/CBB/web-base/src/layouts/index.tsx')),
+'22': React.lazy(() => import(/* webpackChunkName: "p__screen__index" */'@/pages/screen/index.tsx')),
+'23': React.lazy(() => import(/* webpackChunkName: "p__screen1__index" */'@/pages/screen1/index.tsx')),
+'24': React.lazy(() => import(/* webpackChunkName: "p__login__index" */'@/pages/login/index.tsx')),
+'@@/global-layout': React.lazy(() => import(/* webpackChunkName: "layouts__index" */'/Users/工作/Demo/aaa-web/web-base/src/layouts/index.tsx')),
 },
   };
 }

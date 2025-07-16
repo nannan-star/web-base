@@ -3,15 +3,15 @@
 // DO NOT CHANGE IT MANUALLY!
 import React, { useEffect, useState } from 'react';
 import { ApplyPluginsType } from 'umi';
-import { renderClient, RenderClientOpts } from '/Users/工作/ACode/CBB/web-base/node_modules/.pnpm/@umijs+renderer-react@4.4.11_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@umijs/renderer-react';
+import { renderClient, RenderClientOpts } from '/Users/工作/Demo/aaa-web/web-base/node_modules/.pnpm/@umijs+renderer-react@4.4.11_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@umijs/renderer-react';
 import { createHistory } from './core/history';
 import { createPluginManager } from './core/plugin';
 import { getRoutes } from './core/route';
 import type { Location } from 'history';
 
-import Loading from '/Users/工作/ACode/CBB/web-base/src/loading.tsx';
+import Loading from '/Users/工作/Demo/aaa-web/web-base/src/loading.tsx';
 
-import '/Users/工作/ACode/CBB/web-base/src/global.less';
+import '/Users/工作/Demo/aaa-web/web-base/src/global.less';
 import 'antd/dist/reset.css';
 const publicPath = '/';
 const runtimePublicPath = false;

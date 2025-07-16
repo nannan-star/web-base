@@ -5,11 +5,11 @@ import {
   createIntl,
   IntlShape,
   MessageDescriptor,
-} from '/Users/工作/ACode/CBB/web-base/node_modules/.pnpm/react-intl@3.12.1_react@18.3.1/node_modules/react-intl';
+} from '/Users/工作/Demo/aaa-web/web-base/node_modules/.pnpm/react-intl@3.12.1_react@18.3.1/node_modules/react-intl';
 import { getPluginManager } from '../core/plugin';
-import EventEmitter from '/Users/工作/ACode/CBB/web-base/node_modules/.pnpm/event-emitter@0.3.5/node_modules/event-emitter';
+import EventEmitter from '/Users/工作/Demo/aaa-web/web-base/node_modules/.pnpm/event-emitter@0.3.5/node_modules/event-emitter';
 // @ts-ignore
-import warning from '/Users/工作/ACode/CBB/web-base/node_modules/.pnpm/warning@4.0.3/node_modules/warning';
+import warning from '/Users/工作/Demo/aaa-web/web-base/node_modules/.pnpm/warning@4.0.3/node_modules/warning';
 
 export {
   createIntl,
@@ -34,7 +34,7 @@ export {
   defineMessages,
   injectIntl,
   useIntl,
-} from '/Users/工作/ACode/CBB/web-base/node_modules/.pnpm/react-intl@3.12.1_react@18.3.1/node_modules/react-intl';
+} from '/Users/工作/Demo/aaa-web/web-base/node_modules/.pnpm/react-intl@3.12.1_react@18.3.1/node_modules/react-intl';
 
 let g_intl: IntlShape;
 
@@ -46,9 +46,9 @@ export const event = new EventEmitter();
 export const LANG_CHANGE_EVENT = Symbol('LANG_CHANGE');
 
 import enUS0 from 'antd/es/locale/en_US';
-import lang_enUS0 from "/Users/工作/ACode/CBB/web-base/src/locales/en-US.ts";
+import lang_enUS0 from "/Users/工作/Demo/aaa-web/web-base/src/locales/en-US.ts";
 import zhCN0 from 'antd/es/locale/zh_CN';
-import lang_zhCN0 from "/Users/工作/ACode/CBB/web-base/src/locales/zh-CN.ts";
+import lang_zhCN0 from "/Users/工作/Demo/aaa-web/web-base/src/locales/zh-CN.ts";
 
 const flattenMessages=(
   nestedMessages: Record<string, any>,
