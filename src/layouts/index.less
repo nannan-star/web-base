@@ -1,0 +1,71 @@
+@header-height: 50px;
+
+.layout {
+  height: 100vh;
+  overflow: hidden;
+
+  :global {
+    .ant-menu-light.ant-menu-root.ant-menu-inline {
+      border-inline-end: none;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  height: @header-height;
+  line-height: @header-height;
+  transition: all 0.3s;
+  // background-color: var(--primary-color);
+
+  .title {
+    font-size: 18px;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+
+  .headerActions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .headerButton {
+    transition: color 0.3s;
+    color: inherit;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.sider {
+  transition: all 0.3s;
+  height: calc(100vh - @header-height);
+  overflow-y: scroll;
+
+  .trigger {
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+    cursor: pointer;
+    transition: color 0.3s;
+    font-size: 16px;
+    padding: 0 16px;
+    color: var(--font-1);
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.content {
+  padding: 24px;
+  height: calc(100vh - @header-height);
+  overflow-y: scroll;
+}

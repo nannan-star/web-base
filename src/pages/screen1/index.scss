@@ -1,0 +1,132 @@
+@use 'sass:math';
+
+// 默认设计稿的宽度
+$designWidth: 1920;
+// 默认设计稿的高度
+$designHeight: 1080;
+$block-bgc: #10365741;
+
+// px 转为 vw 的函数
+@function vw($px) {
+    @return math.div($px, $designWidth) * 100vw;
+}
+
+// px 转为 vh 的函数
+@function vh($px) {
+    @return math.div($px, $designHeight) * 100vh;
+}
+
+@font-face {
+    font-family: 'YouSheBiaoTiHei';
+    src: url('@/assets/fonts/YouSheBiaoTiHei.ttf') format('truetype');
+    font-weight: regular;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DingTalkJinBuTi';
+    src: url('@/assets/fonts/DingTalkJinBuTi-Regular.ttf') format('truetype');
+    font-weight: regular;
+    font-style: normal;
+}
+
+.screen-root {
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  overflow: hidden;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.screen-header {
+  height: vh(78);
+  background: url('@/assets/images/screen/header_bg.png') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .screen-title {
+    font-family: YouSheBiaoTiHei, DingTalkJinBuTi, sans-serif;
+    color: #fff;
+    font-size: vw(32);
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 80%);
+    letter-spacing: 2px;
+    z-index: 1;
+  }
+}
+
+.screen-footer {
+  height: vh(30);
+  background: url('@/assets/images/screen/footer_bg.png') no-repeat center center;
+  background-size: cover;
+}
+
+.screen-main {
+  height: vh(972);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.screen-left,
+.screen-right {
+  width: vw(450);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.screen-center {
+  .screen-center-top {
+    height: vh(100);
+  }
+
+  // 这里可加地球的阴影或边框
+  .map-box {
+    width: vw(1080);
+    height: vh(800);
+  }
+}
+
+.screen-right {
+  .card-box {
+    padding: vw(10);
+  }
+
+  .card-title {
+    width: 100%;
+    height: vh(34);
+    background: url('@/assets/images/screen/right_title_bg.png') no-repeat center center;
+    font-family: YouSheBiaoTiHei, DingTalkJinBuTi, sans-serif;
+    background-size: cover;
+    text-align: right;
+    font-weight: bold;
+    padding-right: vw(60);
+    font-size: vw(24);
+  }
+}
+
+.screen-left {
+  .card-box {
+    padding: vw(10);
+  }
+
+  .card-title {
+    width: 100%;
+    height: vh(34);
+    background: url('@/assets/images/screen/left_title_bg.png') no-repeat center center;
+    background-size: cover;
+    text-align: left;
+    font-weight: bold;
+    padding-left: vw(60);
+    font-size: vw(24);
+  }
+}
+
+.industry-proportion {
+  width: 100%;
+  height: vh(250);
+}

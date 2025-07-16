@@ -1,0 +1,165 @@
+@import './assets/styles/variables.less';
+@import './assets/styles/loading.less';
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'Helvetica Neue', Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+// 全局CSS变量定义
+:root {
+  // 字体大小变量
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-xxl: 24px;
+
+  // 字重
+  --font-weight-thin: 200;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+
+  // 间距变量
+  --spacing-none: 0;
+  --spacing-super-tight: 2px;
+  --spacing-extra-tight: 4px;
+  --spacing-tight: 8px;
+  --spacing-base-tight: 12px;
+  --spacing-base: 16px;
+  --spacing-base-loose: 20px;
+  --spacing-loose: 24px;
+  --spacing-extra-loose: 32px;
+  --spacing-super-loose: 40px;
+
+  // 圆角变量
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --border-radius-circle: 50%;
+
+  // 阴影变量
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 5%);
+  --shadow-regular: 0 1px 3px 0 rgba(0, 0, 0, 10%), 0 1px 2px -1px rgba(0, 0, 0, 10%);
+  --shadow-md: 0 2px 4px -2px rgba(0, 0, 0, 10%), 0 4px 6px -1px rgba(0, 0, 0, 10%);
+  --shadow-lg: 0 4px 6px -4px rgba(0, 0, 0, 10%), 0 10px 15px -3px rgba(0, 0, 0, 10%);
+  --shadow-xl: 0 8px 10px -6px rgba(0, 0, 0, 10%), 0 20px 25px -5px rgba(0, 0, 0, 10%);
+  --shadow-xxl: 0 25px 50px -12px rgba(0, 0, 0, 20%);
+
+  // 动画变量
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  // 断点变量
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1600px;
+}
+
+[data-theme='theme-light'] {
+  // 品牌色
+  --brand-1: @light-brand-1;
+  --brand-2: @light-brand-2;
+  --brand-3: @light-brand-3;
+  --brand-4: @light-brand-4;
+  --brand-5: @light-brand-5;
+  --brand-6: @light-brand-6;
+
+  // 错误色
+  --error-1: @light-error-1;
+  --error-2: @light-error-2;
+  --error-3: @light-error-3;
+  --error-4: @light-error-4;
+  --error-5: @light-error-5;
+  --error-6: @light-error-6;
+
+  // 警告色
+  --warning-1: @light-warning-1;
+  --warning-2: @light-warning-2;
+  --warning-3: @light-warning-3;
+  --warning-4: @light-warning-4;
+  --warning-5: @light-warning-5;
+  --warning-6: @light-warning-6;
+
+  // 成功色
+  --success-1: @light-success-1;
+  --success-2: @light-success-2;
+  --success-3: @light-success-3;
+  --success-4: @light-success-4;
+  --success-5: @light-success-5;
+  --success-6: @light-success-6;
+
+  // 背景色
+  --background: @light-background;
+  --gray-1: @light-gray-1;
+  --gray-2: @light-gray-2;
+  --gray-3: @light-gray-3;
+  --gray-4: @light-gray-4;
+  --gray-5: @light-gray-5;
+  --gray-6: @light-gray-6;
+
+  // 文字色
+  --font-1: @light-font-1;
+  --font-2: @light-font-2;
+  --font-3: @light-font-3;
+  --font-4: @light-font-4;
+}
+
+[data-theme='theme-dark'] {
+  // 品牌色
+  --brand-1: @dark-brand-1;
+  --brand-2: @dark-brand-2;
+  --brand-3: @dark-brand-3;
+  --brand-4: @dark-brand-4;
+  --brand-5: @dark-brand-5;
+  --brand-6: @dark-brand-6;
+
+  // 错误色
+  --error-1: @dark-error-1;
+  --error-2: @dark-error-2;
+  --error-3: @dark-error-3;
+  --error-4: @dark-error-4;
+  --error-5: @dark-error-5;
+  --error-6: @dark-error-6;
+
+  // 警告色
+  --warning-1: @dark-warning-1;
+  --warning-2: @dark-warning-2;
+  --warning-3: @dark-warning-3;
+  --warning-4: @dark-warning-4;
+  --warning-5: @dark-warning-5;
+  --warning-6: @dark-warning-6;
+
+  // 成功色
+  --success-1: @dark-success-1;
+  --success-2: @dark-success-2;
+  --success-3: @dark-success-3;
+  --success-4: @dark-success-4;
+  --success-5: @dark-success-5;
+  --success-6: @dark-success-6;
+
+  // 背景色
+  --background: @dark-background;
+  --gray-1: @dark-gray-1;
+  --gray-2: @dark-gray-2;
+  --gray-3: @dark-gray-3;
+  --gray-4: @dark-gray-4;
+  --gray-5: @dark-gray-5;
+  --gray-6: @dark-gray-6;
+
+  // 文字色
+  --font-1: @dark-font-1;
+  --font-2: @dark-font-2;
+  --font-3: @dark-font-3;
+  --font-4: @dark-font-4;
+}
